@@ -78,6 +78,7 @@ clientNameLabel.textContent = "Nombre y apellidos: "
 
 const clientNameInput = document.createElement("input");
 clientNameInput.setAttribute("id", "client-name");
+clientNameInput.setAttribute("type", "text");
 clientNameInput.setAttribute("placeholder", "Ej: John Doe");
 
 clientNameBox.append(clientNameLabel, clientNameInput)
@@ -93,13 +94,61 @@ petNameLabel.textContent = "Nombre de mascota: "
 
 const petNameInput = document.createElement("input");
 petNameInput.setAttribute("id", "pet-name");
+petNameInput.setAttribute("type", "text");
 petNameInput.setAttribute("placeholder", "Ej: Micifús");
 
 petNameBox.append(petNameLabel, petNameInput)
 
+//ESPECIE MASCOTA
+
+const petSpeciesBox = document.createElement("div");
+petSpeciesBox.classList.add("form-item");
+
+const petSpeciesLabel = document.createElement("label");
+petSpeciesLabel.setAttribute("for", "pet-species");
+petSpeciesLabel.textContent = "Especie: "
+
+const petSpeciesInput = document.createElement("input");
+petSpeciesInput.setAttribute("id", "pet-species");
+petSpeciesInput.setAttribute("type", "text");
+petSpeciesInput.setAttribute("placeholder", "Ej: Gato");
+
+petSpeciesBox.append(petSpeciesLabel, petSpeciesInput)
+
+//RAZA DE MASCOTA
+
+const petBreedBox = document.createElement("div");
+petBreedBox.classList.add("form-item");
+
+const petBreedLabel = document.createElement("label");
+petBreedLabel.setAttribute("for", "pet-breed");
+petBreedLabel.textContent = "Raza: "
+
+const petBreedInput = document.createElement("input");
+petBreedInput.setAttribute("id", "pet-breed");
+petBreedInput.setAttribute("type", "text");
+petBreedInput.setAttribute("placeholder", "Ej: Callejero");
+
+petBreedBox.append(petBreedLabel, petBreedInput)
+
+//EMAL
+
+const clientEmail = document.createElement("div");
+clientEmail.classList.add("form-item");
+
+const clientEmailLabel = document.createElement("label");
+clientEmailLabel.setAttribute("for", "client-email");
+clientEmailLabel.textContent = "Email: "
+
+const clientEmailInput = document.createElement("input");
+clientEmailInput.setAttribute("id", "client-email");
+clientEmailInput.setAttribute("type", "email");
+clientEmailInput.setAttribute("placeholder", "Ej: juan.simon@mascotero.com");
+
+clientEmail.append(clientEmailLabel, clientEmailInput)
 
 
-clientForm.append(clientNameBox, petNameBox);
+clientForm.append(clientNameBox, petNameBox, petSpeciesBox, petBreedBox, clientEmail);
 clientFormBox.append(formTitle, clientForm);
 clientFormSection.appendChild(clientFormBox)
 
