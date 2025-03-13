@@ -131,7 +131,7 @@ petBreedInput.setAttribute("placeholder", "Ej: Callejero");
 
 petBreedBox.append(petBreedLabel, petBreedInput)
 
-//EMAL
+//EMAIL
 
 const clientEmail = document.createElement("div");
 clientEmail.classList.add("form-item");
@@ -147,10 +147,21 @@ clientEmailInput.setAttribute("placeholder", "Ej: juan.simon@mascotero.com");
 
 clientEmail.append(clientEmailLabel, clientEmailInput)
 
+//BOTÓN SUBMIT
 
-clientForm.append(clientNameBox, petNameBox, petSpeciesBox, petBreedBox, clientEmail);
+const btnSubmit = document.createElement("button");
+btnSubmit.textContent = "Registrarse";
+btnSubmit.classList.add("btn");
+
+// btnSubmit.addEventListener("click", () => {
+
+// })
+
+
+
+clientForm.append(clientNameBox, petNameBox, petSpeciesBox, petBreedBox, clientEmail, btnSubmit);
 clientFormBox.append(formTitle, clientForm);
-clientFormSection.appendChild(clientFormBox)
+clientFormSection.appendChild(clientFormBox);
 
 
 
