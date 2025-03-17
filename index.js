@@ -5,7 +5,7 @@ let clientes = [
     imagen: "url()",
     cliente: "Juan Simón",
     "próxima cita": "",
-  },
+  }, 
   {
     mascota: "Piticli",
     especie: "loro",
